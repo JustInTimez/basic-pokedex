@@ -37,7 +37,7 @@ function logic() {
 
     // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
     const pokemonData = document.createElement("span");
-    const newSpan = document.createTextNode(pokemon);
+    const newSpan = document.createTextNode(name, type, region);
     pokemonData.appendChild(newSpan); 
     document.getElementById("addText").appendChild(pokemonData);
     console.log(pokemon);
@@ -48,33 +48,34 @@ function logic() {
     const pokedexEntry = document.createElement("li");
 
     // Give pokedexEntry (li) a new class equal to the "type" property of the pokemon object
-    class pokeType {pokedexEntry = type};
-    console.log(pokeType);
+    pokedexEntry.classList.add(pokemon.type);
+    console.log(pokedexEntry);
 
 
     // Creating a preview button (using a Template Literal)
     // this code is for an html form that will Google search the name of the pokemon
     const previewButton = `
-            <form action="http://google.com/search" target="_blank">
+            <form action="https://google.com/search" target="_blank">
                 <input name="q" hidden value="${name}">
                 <input type="submit">
             </form>
         `
-}
 
 /* --- Part 3 : Add things into the DOM --- */
 
         // Firstly append pokemonData to the innerHTML of pokedexEntry
-
+        pokedexEntry.innerHTML = pokemonData;
 
         // Secondly append the previewButton to innerHTML of pokedexEntry
-
+        pokedexEntry.innerHTML = previewButton;
 
         // Lastly we will get the ul List element that is meant to contain all pokedex entries
-        // The we will append pokedexEntry to the innerHTML of the pokedexEntries ul element
-
+        const entries = document.getElementById("pokedex-entries");
+        // Then we will append pokedexEntry to the innerHTML of the pokedexEntries ul element
+        entries.appendChild(pokedexEntry);
+        console.log(pokedexEntry);
 
 /*-----------------------------------------------
 * Solution must be above this comment
 *---------------------------------------------*/
-
+}
