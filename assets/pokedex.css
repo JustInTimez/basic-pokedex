@@ -27,6 +27,37 @@
     background-color: rgb(238, 212, 98);
 }
 
+.flying {
+    background-color: rgb(193, 218, 223);
+}
+
+.fighting {
+    background-color: rgb(141, 55, 40);
+}
+
+.poison {
+    background-color: rgb(105, 52, 175);
+}
+
+.ground {
+    background-color: rgb(216, 124, 37);
+}
+
+.psychic {
+    background-color: rgb(64, 48, 100);
+}
+
+.rock {
+    background-color: rgb(59, 34, 30);
+}
+
+.bug {
+    background-color: rgb(142, 214, 59);
+}
+
+.ghost {
+    background-color: rgb(107, 104, 103);
+}
 
 /* ------------------------------------------
 *   Layouts
